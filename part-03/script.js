@@ -1,5 +1,5 @@
 //setup
-const choices = ['scissors', 'rock', 'scissors'];
+const choices = ['scissors', 'rock', 'paper'];
 
 //input
 let userInput = process.argv[2]?.toLowerCase();
