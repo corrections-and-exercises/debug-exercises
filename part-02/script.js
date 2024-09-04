@@ -1,11 +1,12 @@
-const firstNumber = document.querySelector('.firstNumber');
+const firstNumber = document.querySelector('#firstNumber');
 const secondNumber = document.querySelector('#secondNumber');
-const addBtn = document.getElementsByTagName('button');
-const resultSpan = document.getElementById('#result');
+const addBtn = document.getElementsByTagName('button')[0];
+const resultSpan = document.getElementById('result');
 
-const addNumbers = () => a * b;
+const addNumbers = (a, b) => a + b;
 
-addBtn.addEvntListener('click', (e) => {
-    const result = addNumbers(secondNumber.value, firstNumber.value);
+addBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const result = addNumbers(+secondNumber.value, +firstNumber.value);
     resultSpan.textContent = result;
 });
